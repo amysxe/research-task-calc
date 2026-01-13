@@ -48,21 +48,25 @@
         }
         
         h1 {
-            color: #333;
+            color: white;
             margin-bottom: 5px;
-            font-size: 24px;
+            font-size: 16px;
+            text-align: center;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
         
         @media (max-width: 640px) {
             h1 {
-                font-size: 20px;
+                font-size: 15px;
             }
         }
         
         .subtitle {
-            color: #666;
-            margin-bottom: 20px;
+            color: white;
+            margin-bottom: 15px;
             font-size: 13px;
+            text-align: center;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.2);
         }
         
         .section {
@@ -224,10 +228,10 @@
 </head>
 <body>
     <div class="wrapper">
+        <h1>DX Research Task Weight Calculator</h1>
+        <p class="subtitle">Calculate work estimation and priority for research tasks</p>
+        
         <div class="container">
-            <h1>DX Research Task Weight Calculator</h1>
-            <p class="subtitle">Calculate work estimation and priority for research tasks</p>
-            
             <div class="section">
                 <div class="section-title">1. Research Type</div>
                 <select name="researchType" onchange="calculate()" class="dropdown">
