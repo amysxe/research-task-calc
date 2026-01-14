@@ -236,9 +236,9 @@
                 <div class="section-title">1. Research Type</div>
                 <select name="researchType" onchange="calculate()" class="dropdown">
                     <option value="">Select research type...</option>
-                    <option value="60">Strategic (60 days)</option>
-                    <option value="10">Tactical/BAU (10 days)</option>
-                    <option value="10">Evaluative (10 days)</option>
+                    <option value="60">Strategic (Min. 60 days)</option>
+                    <option value="10">Tactical/BAU (Min. 10 days)</option>
+                    <option value="10">Evaluative (Min. 10 days)</option>
                 </select>
             </div>
             
@@ -246,8 +246,8 @@
                 <div class="section-title">2. Participant Complexity</div>
                 <select name="participant" onchange="calculate()" class="dropdown">
                     <option value="">Select participant complexity...</option>
-                    <option value="1">Non-Segmented (1 day)</option>
-                    <option value="2">Segmented (2 days)</option>
+                    <option value="1">Non-Segmented (Min. 1 day)</option>
+                    <option value="2">Segmented (Min. 2 days)</option>
                 </select>
             </div>
             
@@ -256,37 +256,37 @@
                 <div class="option">
                     <label>
                         <input type="checkbox" name="method" value="1" onchange="calculate()">
-                        <span class="option-text">Landscape/Benchmark (1 day)</span>
+                        <span class="option-text">Landscape/Benchmark (Min. 1 day)</span>
                     </label>
                 </div>
                 <div class="option">
                     <label>
                         <input type="checkbox" name="method" value="2" onchange="calculate()">
-                        <span class="option-text">UT (2 days)</span>
+                        <span class="option-text">UT (Min. 2 days)</span>
                     </label>
                 </div>
                 <div class="option">
                     <label>
                         <input type="checkbox" name="method" value="2" onchange="calculate()">
-                        <span class="option-text">Survey (2 days)</span>
+                        <span class="option-text">Survey (Min. 2 days)</span>
                     </label>
                 </div>
                 <div class="option">
                     <label>
                         <input type="checkbox" name="method" value="3" onchange="calculate()">
-                        <span class="option-text">Interview (3 days)</span>
+                        <span class="option-text">Interview (Min. 3 days)</span>
                     </label>
                 </div>
                 <div class="option">
                     <label>
                         <input type="checkbox" name="method" value="4" onchange="calculate()">
-                        <span class="option-text">FGD (4 days)</span>
+                        <span class="option-text">FGD (Min. 4 days)</span>
                     </label>
                 </div>
                 <div class="option">
                     <label>
                         <input type="checkbox" name="method" value="5" onchange="calculate()">
-                        <span class="option-text">Contextual Inquiries (5 days)</span>
+                        <span class="option-text">Contextual Inquiries (Min. 5 days)</span>
                     </label>
                 </div>
             </div>
@@ -295,9 +295,9 @@
                 <div class="section-title">4. Scope Complexity</div>
                 <select name="scope" onchange="calculate()" class="dropdown">
                     <option value="">Select scope complexity...</option>
-                    <option value="1">Small feature within tower (1 day)</option>
-                    <option value="2">Major journey (2 days)</option>
-                    <option value="3">App wide (3 days)</option>
+                    <option value="1">Small feature within tower (Min. 1 day)</option>
+                    <option value="2">Major journey (Min. 2 days)</option>
+                    <option value="3">App wide (Min. 3 days)</option>
                 </select>
             </div>
             
@@ -305,17 +305,18 @@
                 <div class="section-title">5. Tower Dependency</div>
                 <select name="tower" onchange="calculate()" class="dropdown">
                     <option value="">Select tower dependency...</option>
-                    <option value="1">Within tower (1 day)</option>
-                    <option value="2">Across tower (2 days)</option>
+                    <option value="1">Within tower (Min. 1 day)</option>
+                    <option value="2">Across tower (Min. 2 days)</option>
                 </select>
             </div>
             
             <div class="results">
                 <h2>Results</h2>
-                <div class="result-item" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+                <div class="result-item" style="border-bottom: none; margin-bottom: 8px; padding-bottom: 0;">
                     <span class="result-label">Total Effort:</span>
-                    <span class="result-value" id="totalDays">0 days</span>
+                    <span class="result-value" id="totalDays">Min. 0 days</span>
                 </div>
+                <p style="font-size: 11px; opacity: 0.85; margin: 0; line-height: 1.4;">The above estimations might be affected by priority, participant recruitment and other aspects</p>
             </div>
         </div>
         
@@ -357,7 +358,7 @@
             }
             
             // Update results
-            document.getElementById('totalDays').textContent = total + ' days';
+            document.getElementById('totalDays').textContent = 'Min. ' + total + ' days';
         }
     </script>
 </body>
