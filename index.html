@@ -312,13 +312,9 @@
             
             <div class="results">
                 <h2>Results</h2>
-                <div class="result-item">
-                    <span class="result-label">Work Estimation:</span>
+                <div class="result-item" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+                    <span class="result-label">Total Effort:</span>
                     <span class="result-value" id="totalDays">0 days</span>
-                </div>
-                <div class="result-item">
-                    <span class="result-label">Priority:</span>
-                    <span class="priority-badge" id="priority">-</span>
                 </div>
             </div>
         </div>
@@ -362,19 +358,6 @@
             
             // Update results
             document.getElementById('totalDays').textContent = total + ' days';
-            
-            // Determine priority
-            const priorityElement = document.getElementById('priority');
-            if (total < 28) {
-                priorityElement.textContent = 'Low';
-                priorityElement.className = 'priority-badge priority-low';
-            } else if (total >= 28 && total <= 56) {
-                priorityElement.textContent = 'Medium';
-                priorityElement.className = 'priority-badge priority-medium';
-            } else {
-                priorityElement.textContent = 'High';
-                priorityElement.className = 'priority-badge priority-high';
-            }
         }
     </script>
 </body>
